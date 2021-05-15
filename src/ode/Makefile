@@ -63,6 +63,9 @@ endif
 ifeq ($(MAKECMDGOALS),release)
   CFLAGS += -DdNODEBUG
 endif
+ifeq ($(MAKECMDGOALS),debig)
+  CFLAGS += -g -ggdb
+endif
 
 CXXFLAGS = -std=c++11
 INCLUDE = -I../../include/ode -I../../include/ode/ode/fluid_dynamics -Iode/src -Iode/src/fluid_dynamics -Ilibccd/src -Ilibccd/src/custom -IOPCODE
